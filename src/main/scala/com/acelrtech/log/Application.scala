@@ -22,6 +22,8 @@ object LoggingEngine {
       }catch {
         case e:Exception =>
           log.error("1/0",e)
+          remote ! com.acelrtech.log.models.EnableGraylog2
+          log.debug("Debug test message")
       }
     }
 }
